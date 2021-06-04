@@ -1,0 +1,59 @@
+Changes to 0.4.21, 0.4.22
+
+ - Unify dll loader between the standard and compat library, fixing load
+ failures on some previously supported platforms.
+
+Changes to 0.4.20
+
+- merge in a compatability layer for the upstream libmagic python binding.
+  Since both this package and that one are called 'magic', this compat layer
+  removes a very common source of runtime errors.  Use of that libmagic API will
+  produce a deprecation warning.
+
+- support python 3.9 in tests and pypi metadata
+
+- add support for magic_descriptor functions, which take a file descriptor
+  rather than a filename.
+
+- sometimes the returned description includes snippets of the file, e.g a title
+  for MS Word docs.  Since this is in an unknown encoding, we would throw a
+  unicode decode error trying to decode.  Now, it decodes with
+  'backslashreplace' to handle this more gracefully.  The undecodable characters
+  are replaced with hex escapes.
+
+- add support for MAGIC_EXTENSION, to return possible file extensions.
+
+- add mypy typing stubs file, for type checking
+
+Changes in 0.4.18
+
+- Make bindings for magic_[set|get]param optional, and throw NotImplementedError
+if they are used but not supported.  Only call setparam() in the constructor if
+it's supported. This prevents breakage on CentOS7 which uses an old version of
+libmagic.
+
+- Add tests for CentOS 7 & 8
+
+Changes in 0.4.16 and 0.4.17
+
+- add MAGIC_MIME_TYPE constant, use that in preference to MAGIC_MIME internally.
+This sets up for a breaking change in a future major version bump where
+MAGIC_MIME will change to mathch magic.h.
+- add magic.version() function to return library version
+- add setparam/getparam to control internal behavior
+- increase internal limits with setparam to prevent spurious error on some jpeg files
+- various setup.py improvements to declare modern python support
+- support MSYS2 magic dlls
+- fix warning about using 'is' on an int in python 3.8
+- include tests in source distribution
+
+- many test improvements:
+-- tox runner support
+-- remove deprecated test_suite field from setup.py
+-- docker tests that cover all LTS ubuntu versions
+-- add test for snapp file identification
+
+- doc improvements
+-- document dependency install process for debian
+-- various typos
+-- document test running process

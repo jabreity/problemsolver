@@ -1,0 +1,109 @@
+abstract
+as
+async
+await
+become
+box
+break
+const
+continue
+crate;
+do
+dyn
+else
+enum;
+extern
+final
+fn;
+for
+if
+impl
+in
+let
+loop
+macro
+match
+mod;
+move
+mut
+override
+priv
+pub
+ref
+return
+self
+Self
+static
+struct;
+super
+trait
+try
+type
+typeof
+union;
+unsafe
+unsized
+use
+virtual
+where
+while
+yield
+
+----------------------------------------------------
+
+[
+	["keyword", "abstract"],
+	["keyword", "as"],
+	["keyword", "async"],
+	["keyword", "await"],
+	["keyword", "become"],
+	["keyword", "box"],
+	["keyword", "break"],
+	["keyword", "const"],
+	["keyword", "continue"],
+	["keyword", "crate"], ["punctuation", ";"],
+	["keyword", "do"],
+	["keyword", "dyn"],
+	["keyword", "else"],
+	["keyword", "enum"], ["punctuation", ";"],
+	["keyword", "extern"],
+	["keyword", "final"],
+	["keyword", "fn"], ["punctuation", ";"],
+	["keyword", "for"],
+	["keyword", "if"],
+	["keyword", "impl"],
+	["keyword", "in"],
+	["keyword", "let"],
+	["keyword", "loop"],
+	["keyword", "macro"],
+	["keyword", "match"],
+	["keyword", "mod"], ["punctuation", ";"],
+	["keyword", "move"],
+	["keyword", "mut"],
+	["keyword", "override"],
+	["keyword", "priv"],
+	["keyword", "pub"],
+	["keyword", "ref"],
+	["keyword", "return"],
+	["keyword", "self"],
+	["keyword", "Self"],
+	["keyword", "static"],
+	["keyword", "struct"], ["punctuation", ";"],
+	["keyword", "super"],
+	["keyword", "trait"],
+	["keyword", "try"],
+	["keyword", "type"],
+	["keyword", "typeof"],
+	["keyword", "union"], ["punctuation", ";"],
+	["keyword", "unsafe"],
+	["keyword", "unsized"],
+	["keyword", "use"],
+	["keyword", "virtual"],
+	["keyword", "where"],
+	["keyword", "while"],
+	["keyword", "yield"]
+]
+
+----------------------------------------------------
+
+Checks for all keywords.

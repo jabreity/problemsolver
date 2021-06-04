@@ -1,0 +1,100 @@
+public class Solo<T extends com.foo.Foo.Bar> {}
+Solo<Integer> val = new Solo<>();
+Duo<Double, Character> dual = new Duo<Double, Character>(12.2585, 'C');
+
+----------------------------------------------------
+
+[
+	["keyword", "public"],
+	["keyword", "class"],
+	["class-name", [
+		"Solo"
+	]],
+	["generics", [
+		["punctuation", "<"],
+		["class-name", [
+			"T"
+		]],
+		["keyword", "extends"],
+		["class-name", [
+			["namespace", [
+				"com",
+				["punctuation", "."],
+				"foo",
+				["punctuation", "."]
+			]],
+			"Foo",
+			["punctuation", "."],
+			"Bar"
+		]],
+		["punctuation", ">"]
+	]],
+	["punctuation", "{"],
+	["punctuation", "}"],
+
+	["class-name", [
+		"Solo"
+	]],
+	["generics", [
+		["punctuation", "<"],
+		["class-name", [
+			"Integer"
+		]],
+		["punctuation", ">"]
+	]],
+	" val ",
+	["operator", "="],
+	["keyword", "new"],
+	["class-name", [
+		"Solo"
+	]],
+	["generics", [
+		["punctuation", "<"],
+		["punctuation", ">"]
+	]],
+	["punctuation", "("],
+	["punctuation", ")"],
+	["punctuation", ";"],
+
+	["class-name", [
+		"Duo"
+	]],
+	["generics", [
+		["punctuation", "<"],
+		["class-name", [
+			"Double"
+		]],
+		["punctuation", ","],
+		["class-name", [
+			"Character"
+		]],
+		["punctuation", ">"]
+	]],
+	" dual ",
+	["operator", "="],
+	["keyword", "new"],
+	["class-name", [
+		"Duo"
+	]],
+	["generics", [
+		["punctuation", "<"],
+		["class-name", [
+			"Double"
+		]],
+		["punctuation", ","],
+		["class-name", [
+			"Character"
+		]],
+		["punctuation", ">"]
+	]],
+	["punctuation", "("],
+	["number", "12.2585"],
+	["punctuation", ","],
+	["string", "'C'"],
+	["punctuation", ")"],
+	["punctuation", ";"]
+]
+
+----------------------------------------------------
+
+Checks for generics.
